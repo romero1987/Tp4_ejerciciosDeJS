@@ -48,4 +48,4 @@ const libro1 = new Libro(500, 'Martin fierro', 'Jose Hernandez', 78);
 const libro2 = new Libro(500, 'Martin fierro', 'Desconocido', 112);
 
 libro1.mostrarISBN()
-libro2.mostrarISBN()
+libro1.mostrarISBN()
