@@ -33,19 +33,40 @@ class Libro{
     }
 
     get titulo(){
-        return this.titulo
+        return this._titulo
     }
     set titulo(nuevoTitulo){
-        this.titulo = nuevoTitulo;
+        this._titulo = nuevoTitulo;
+    }
+    get autor(){
+        return this._autor
+    }
+    set autor(nuevoAutor){
+        this._autor = nuevoAutor;
+    }
+    get numeroDePagina(){
+        return this._numeroDePagina
+    }
+    set numeroDePagina(nuevoNumeroDePagina){
+        if(nuevoNumeroDePagina )
+        this._numeroDePagina = nuevoNumeroDePagina;
     }
 
     mostrarLibros(){
-        document.write(`ISBN: ${this.ISBN}, Titulo: ${this.titulo}`);
+        document.write(`<p>El libro ${this._titulo} con ISBN ${this.ISBN} creado por el autor ${this._autor} tiene páginas ${this._numeroDePagina}</p>`);
     }
 }
 
 const libro1 = new Libro(500, 'Martin fierro', 'Jose Hernandez', 78);
-const libro2 = new Libro(500, 'Martin fierro', 'Desconocido', 112);
+const libro2 = new Libro(500, 'El Principito', 'Antoine de Saint-Exupéry', 112);
 
-libro1.mostrarISBN()
-libro2.mostrarISBN()
+libro1.mostrarLibros()
+libro2.mostrarLibros()
+
+if(libro1._numeroDePagina > libro2._numeroDePagina){
+    document.write(`El libro "${libro1._titulo}" tiene mas numeros de paginas que "${libro2._titulo}"`);
+}else if(libro1._numeroDePagina < libro2._numeroDePagina){
+    document.write(`El libro "${libro2._titulo}" tiene mas numeros de paginas que "${libro1._titulo}"`);
+}else{
+    document.write(`Los libros tienen la misma cantidad de paginas`);
+} 
