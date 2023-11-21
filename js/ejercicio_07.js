@@ -24,12 +24,40 @@ las salidas de las operaciones seleccionadas por el usuario se pueden mostrar en
           this.nombre = nombre;
           this.telefono = telefono;
         }
+
+        get nombre(){
+          return this._nombre;
+        }
+        set nombre(nuevoNombre){
+          this._nombre = nuevoNombre;
+        }
+
+        get telefono(){
+          return this._telefono;
+        }
+        set telefono(nuevoTelefono){
+          this._telefono = nuevoTelefono;
+        }
       }    
       
       class Agenda {
         constructor(tamanoAgenda = 10) {
           this.contactos = [];
           this.tamano = tamanoAgenda;
+        }
+
+        get contactos(){
+          return this._contactos
+        }
+        set contactos(nuevoContactos){
+          this._contactos = nuevoContactos;
+        }
+
+        get tamano(){
+          return this._tamano;
+        }
+        set tamano(nuevoTamano){
+          this._tamano = nuevoTamano;
         }
       
       
